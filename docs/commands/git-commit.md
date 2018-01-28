@@ -16,21 +16,35 @@ $ git commit <filename>  -m "message"
 
 上面命令会将工作区中指定文件的变化，先添加到暂存区，然后再将暂存区提交到仓库区。
 
+## 命令行参数
+
+### -a
+
 `-a`参数用于先将所有工作区的变动文件，提交到暂存区，再运行`git commit`。用了`-a`参数，就不用执行`git add .`命令了。
 
 ```bash
-$ git commit -am
+$ git commit -am "message"
 ```
 
-`--amend`参数用于撤销上一次 commit，然后生成一个新的 commit。
+如果没有指定提交说明，运行下面的命令会直接打开默认的文本编辑器，让用户撰写提交说明。
 
 ```bash
-$ git commit --amend - m "new commit message"
+$ git commit -a
 ```
+
+### --allow-empty
 
 `--allow-empty`参数用于没有提交信息的 commit。
 
 ```bash
 $ git commit --allow-empty
+```
+
+### --amend
+
+`--amend`参数用于撤销上一次 commit，然后生成一个新的 commit。
+
+```bash
+$ git commit --amend - m "new commit message"
 ```
 

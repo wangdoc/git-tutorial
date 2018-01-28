@@ -1,5 +1,7 @@
 # git log
 
+`git log`命令按照提交时间从最晚到最早的顺序，列出所有 commit。
+
 ```bash
 # 列出当前分支的版本历史
 $ git log
@@ -41,3 +43,16 @@ git log --graph --decorate --pretty=oneline --abbrev-commit
 - --pretty=oneline 只显示commit信息的标题
 - --abbrev-commit 只显示commit SHA1的前7位
 
+## 命令行参数
+
+### --oneline
+
+`git log`默认输出每个 commit 的详细信息，为了节省空间，`--oneline`参数让输出时，每个 commit 只占用一行。
+
+```bash
+$ git log --oneline --decorate
+ccc3333 (HEAD, my-feature-branch) A third commit
+bbb2222 A second commit
+aaa1111 A first commit
+9999999 (master) Old stuff on master
+```
