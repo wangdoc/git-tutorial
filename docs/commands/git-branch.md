@@ -76,3 +76,13 @@ $ git branch --merged
 $ git branch --no-merged
 ```
 
+## 命令行参数
+
+### -d
+
+`-d`参数用于删除一个指定分支。
+
+```bash
+$ git branch -d <branchname>
+```
+

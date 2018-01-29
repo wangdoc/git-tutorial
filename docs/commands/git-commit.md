@@ -48,3 +48,28 @@ $ git commit --allow-empty
 $ git commit --amend - m "new commit message"
 ```
 
+### --fixup
+
+`--fixup`参数的含义是，当前添加的 commit 是以前某一个 commit 的修正。以后执行互动式的`git rebase`的时候，这两个 commit 将会合并成一个。
+
+```bash
+$ git commit --fixup <commit>
+```
+
+执行上面的命令，提交说明将自动生成，即在目标 commit 的提交说明的最前面，添加“fixup! ”这个词。
+
+### -m
+
+`-m`参数用于添加提交说明。
+
+```bash
+$ git commit -m "message"
+```
+
+### --squash
+
+`--squash`参数的作用与`--fixup`类似，表示当前添加的 commit 应该与以前某一个 commit 合并成一个，以后执行互动式的`git rebase`的时候，这两个 commit 将会合并成一个。
+
+```bash
+$ git commit --squash <commit>
+```
