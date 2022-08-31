@@ -19,3 +19,19 @@ $ git push --tags
 $ git tag v0.0.1
 $ git push origin master --tags
 ```
+
+`git tag --contains`查询哪些标签包含某个提交。
+
+```bash
+$ git tag --contains 4ae3003ba5
+v2.36.0
+v2.36.0-rc0
+v2.36.0-rc1
+v2.36.0-rc2
+v2.36.1
+v2.37.0
+v2.37.0-rc0
+v2.37.0-rc1
+v2.37.0-rc2
+```
+
