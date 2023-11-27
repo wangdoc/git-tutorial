@@ -86,3 +86,21 @@ $ git branch --no-merged
 $ git branch -d <branchname>
 ```
 
+### -m，-M
+
+`-m`或`-M`用于分支改名。
+
+```bash
+$ git branch (-m | -M) <oldbranch> <newbranch>
+```
+
+上面命令将`oldbranch`改名为`newbranch`。
+
+如果省略`oldbracn`，则将当前分支改名为`newbranch`。
+
+```bash
+$ git branch (-m | -M) <newbranch>
+```
+
+如果`newbranch`已经存在，则必须使用`-M`参数，进行强制改名。
+
